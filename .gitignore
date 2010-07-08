@@ -19,3 +19,6 @@ rdoc
 pkg
 
 ## PROJECT::SPECIFIC
+spec/spec.opts
+.bundle
+spec/support/test.configuration.rb

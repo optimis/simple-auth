@@ -1,0 +1,7 @@
+api_host do
+  development 'test.domain.local'
+end
+
+api_path do
+  login 'login'
+end
