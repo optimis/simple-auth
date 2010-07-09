@@ -36,7 +36,5 @@ describe ApplicationController, '#login' do
 end
 
 describe ApplicationController, '#login' do
-  context 'The user is not logged into the Authenticator application' do
-    it 'should redirect to the current practice path in optimis'
-  end
+  context 'The user is not logged into the Authenticator application'
 end
