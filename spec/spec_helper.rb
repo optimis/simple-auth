@@ -3,6 +3,10 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
 RAILS_ENV = 'development'
 
+require 'rubygems'
+require 'bundler'
+Bundler.setup
+
 require 'action_controller'
 require 'rest_client'
 
