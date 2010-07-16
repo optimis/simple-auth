@@ -1,7 +1,7 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
-RAILS_ENV = 'development'
+RAILS_ENV = 'test'
 
 require 'rubygems'
 require 'bundler'
