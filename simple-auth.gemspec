@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Umang Chouhan"]
-  s.date = %q{2010-07-09}
+  s.date = %q{2010-07-16}
   s.description = %q{Provides a simple API to authenticate with a rails application}
   s.email = %q{uchouhan@optimiscorp.com}
   s.extra_rdoc_files = [
@@ -28,8 +28,9 @@ Gem::Specification.new do |s|
      "lib/simple-auth.rb",
      "lib/simple-auth/api.rb",
      "lib/simple-auth/configuration_helper.rb",
-     "spec/api_spec.rb",
+     "simple-auth.gemspec",
      "spec/configuration_helper_spec.rb",
+     "spec/simple_auth_spec.rb",
      "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/uchouhan/simple-auth}
@@ -38,8 +39,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.6}
   s.summary = %q{Simple shared authentication API}
   s.test_files = [
-    "spec/api_spec.rb",
-     "spec/configuration_helper_spec.rb",
+    "spec/configuration_helper_spec.rb",
+     "spec/simple_auth_spec.rb",
      "spec/spec_helper.rb"
   ]
 
