@@ -1,7 +1,9 @@
-api_host do
-  development 'test.domain.local'
-end
+SimpleAuth.configure do
+  host do
+    development 'test.domain.local'
+  end
 
-api_path do
-  login 'login'
+  paths do
+    login 'login'
+  end
 end

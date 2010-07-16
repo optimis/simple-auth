@@ -1,35 +1,23 @@
 require 'spec/spec_helper'
 
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::Base; end
 
-end
-
-describe ApplicationController, '#api' do
-  before do
-    @api_host = 'http://pt.optimis.local'
-  end
-  
-  it 'should initialize the api path from the settings' do
-    subject.api_host.should == @api_host
-  end
-end
-
-describe ApplicationController, '#path' do
-  before do
-    @login_path = 'login'
+describe ApplicationController do
+  context '#api' do
+    it 'should initialize the api path from the settings' do
+      subject.api_host.should == 'http://test.domain.local'
+    end
   end
 
-  it 'should initialize the login path from the settings' do
-    subject.login_path.should == @login_path
-  end
-end
-
-describe ApplicationController, '#url' do
-  before do
-    @login_url = 'http://pt.optimis.local/login'
+  context '#path' do
+    it 'should initialize the login path from the settings' do
+      subject.login_path.should == 'login'
+    end
   end
 
-  it 'should initialize the login path from the settings' do
-    subject.login_url.should == @login_url
+  context '#url' do
+    it 'should initialize the login path from the settings' do
+      subject.login_url.should == 'http://test.domain.local/login'
+    end
   end
 end
