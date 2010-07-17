@@ -8,7 +8,7 @@ module SimpleAuth
       user_session = api['user_session.json'].get(:cookies => cookies)
 
       if user_session.headers[:content_type].include?('text/html')
-        redirect_to login_path
+        redirect_to login_url
         return
       else
         user_session_object = ActiveSupport::JSON.decode(user_session)
