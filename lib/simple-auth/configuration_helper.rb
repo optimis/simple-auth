@@ -15,6 +15,8 @@ module SimpleAuth
     def self.method_missing(name, value)
       ActionController::Base.send(:define_method, "#{name}_path", lambda { value })
       ActionController::Base.send(:define_method, "#{name}_url", lambda { api_host + '/' + value })
+      ActionView::Base.send(:define_method, "#{name}_path", lambda { value })
+      ActionView::Base.send(:define_method, "#{name}_url", lambda { api_host + '/' + value })
     end
   end
 
