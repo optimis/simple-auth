@@ -7,6 +7,7 @@ module SimpleAuth
     def self.method_missing(name, value)
       if name.to_s == RAILS_ENV
         ActionController::Base.send(:define_method, 'api_host', lambda { 'http://' + value })
+        ActionView::Base.send(:define_method, 'api_host', lambda { 'http://' + value })
       end
     end
   end
