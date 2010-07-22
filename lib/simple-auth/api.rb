@@ -1,7 +1,7 @@
 module SimpleAuth
   module Api
     def api
-      RestClient::Resource.new(api_host)
+      @api ||= RestClient::Resource.new(api_host)
     end
 
     def login
