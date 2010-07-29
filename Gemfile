@@ -1,16 +1,9 @@
 source :gemcutter
 
-gem 'rest-client'
-
-group :development do
-  gem 'growl-glue'
-end
+gem 'rest-client', :require => 'rest_client'
+gem 'yajl-ruby', :require => 'yajl'
 
 group :test do
-  gem 'actionpack', :require => 'action_pack'
-  gem 'activesupport', :require => 'active_support'
-  gem 'ZenTest'
-  gem 'rspec'
+  gem 'rspec', '2.0.0.beta.19'
   gem 'fakeweb'
-  gem 'rack-debug'
 end

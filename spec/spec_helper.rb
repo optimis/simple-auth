@@ -1,25 +1,19 @@
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-
-RAILS_ENV = 'test'
-
 require 'rubygems'
 require 'bundler'
 Bundler.setup
+Bundler.require(:default, :test)
 
-require 'action_controller'
-require 'rest_client'
+RAILS_ENV = 'test'
 
-require 'simple-auth'
-require 'spec'
-require 'spec/autorun'
-
-require 'fake_web'
-
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |file| require File.expand_path(file) }
+require 'spec/support/stubs'
+require 'lib/simple-auth'
+require 'spec/support/configuration'
+require 'spec/support/mock_requests'
 
 FakeWeb.allow_net_connect = false
 
-Spec::Runner.configure do |config|
-  
+RSpec.configure do |config|
+  config.before(:each) do
+    FakeWeb.clean_registry
+  end
 end

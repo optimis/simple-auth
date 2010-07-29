@@ -22,3 +22,7 @@ pkg
 spec/spec.opts
 .bundle
 spec/support/test.configuration.rb
+
+.rvmrc
+.rspec
+specs.watchr.rb
