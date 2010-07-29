@@ -70,8 +70,8 @@ In the consumer application, set up your Gemfile to use the simple-auth gem.
 
 Run 'bundle install', and you should have the following helpers available in your controllers and views.
 
-#api, A RestClient::Resource instance pointing to the host endpoint.
-#login, The #login method uses the cookie in the browser request to authenticate the user, and follow redirection from the authenticator application.
+api, A RestClient::Resource instance pointing to the host endpoint.
+login, The #login method uses the cookie in the browser request to authenticate the user, and follow redirection from the authenticator application.
 
 Controller Usage
 ================
