@@ -3,12 +3,6 @@ require 'spec/spec_helper'
 describe SimpleAuth do
   subject { ApplicationController.new }
 
-  before :all do
-    class ApplicationController < ActionController::Base
-      include SimpleAuth::Api
-    end
-  end
-
   describe '#api' do
     it 'should return the REST client' do
       subject.api.should be_instance_of RestClient::Resource
@@ -17,13 +11,8 @@ describe SimpleAuth do
 
   describe '#login' do
     before do
-      FakeWeb.register_uri(:get,
-        'http://test.domain.local/user_session.json',
-        :body => '{ "session" : "test" }',
-        :status => [ '200', 'OK' ],
-        :content_type => 'application/json'
-      )
-      
+      mock_valid_login
+
       subject.stub!(:cookies => {})
       subject.stub!(:redirect_to)
     end
@@ -43,14 +32,8 @@ describe SimpleAuth do
   describe '#login' do
     context 'The user is not logged into the authentication provider' do
       before do
-        FakeWeb.register_uri(
-          :get,
-          'http://test.domain.local/user_session.json',
-          :body => '<html></html>',
-          :status => [ '200', 'OK' ],
-          :content_type => 'text/html'
-        )
-        
+        mock_invalid_login
+
         subject.stub!(:cookies => {})
       end
 
@@ -62,14 +45,8 @@ describe SimpleAuth do
 
     context 'The user is logged into the authentication provider' do
       before do
-        FakeWeb.register_uri(
-          :get,
-          'http://test.domain.local/user_session.json',
-          :body => '{ "user", "", "session" : "test" }',
-          :status => [ '200', 'OK' ],
-          :content_type => 'application/json'
-        )
-        
+        mock_valid_login
+
         subject.stub!(:cookies => {})
         subject.stub!(:session => {})
       end
@@ -80,5 +57,4 @@ describe SimpleAuth do
       end
     end
   end
-
 end
