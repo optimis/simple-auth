@@ -15,7 +15,7 @@ module SimpleAuth
     def login
       user_session = api['user_session.json'].get(:cookies => cookies) do |response, request, &block|
         if response.code == 200
-          response.return!(request, &block)
+          # response.return!(request, &block)
           set_user_session(response)
         else
           # response.follow_redirection(request, &block)
