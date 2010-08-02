@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{simple-auth}
-  s.version = "0.3.6"
+  s.version = "0.3.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Umang Chouhan"]
@@ -25,7 +25,12 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "configuration.rb.example",
+     "lib/simple_auth.rb",
+     "lib/simple_auth/api.rb",
+     "lib/simple_auth/configuration_helper.rb",
      "simple-auth.gemspec",
+     "spec/lib/simple_auth/api_spec.rb",
+     "spec/lib/simple_auth/configuration_helper_spec.rb",
      "spec/spec_helper.rb",
      "spec/support/configuration.rb",
      "spec/support/mock_requests.rb",
