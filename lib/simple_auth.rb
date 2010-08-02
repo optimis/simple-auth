@@ -1,0 +1,5 @@
+require 'rubygems'
+require 'rest_client'
+require 'yajl'
+require 'simple_auth/configuration_helper'
+require 'simple_auth/api'

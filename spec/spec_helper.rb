@@ -6,7 +6,7 @@ Bundler.require(:default, :test)
 RAILS_ENV = 'test'
 
 require 'spec/support/stubs'
-require 'lib/simple-auth'
+require 'lib/simple_auth'
 require 'spec/support/configuration'
 require 'spec/support/mock_requests'
 

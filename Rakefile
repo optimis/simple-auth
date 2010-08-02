@@ -10,7 +10,7 @@ begin
     gem.email = "uchouhan@optimiscorp.com"
     gem.homepage = "http://github.com/uchouhan/simple-auth"
     gem.authors = ["Umang Chouhan"]
-    gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_development_dependency "rspec", ">= 2.0.0.beta.16"
     gem.add_development_dependency "yard", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
