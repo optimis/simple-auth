@@ -12,6 +12,8 @@ begin
     gem.authors = ["Umang Chouhan"]
     gem.add_development_dependency "rspec", ">= 2.0.0.beta.16"
     gem.add_development_dependency "yard", ">= 0"
+    gem.add_dependency 'yajl-ruby', '>= 0'
+    gem.add_dependency 'rest-client', '>= 0'
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
