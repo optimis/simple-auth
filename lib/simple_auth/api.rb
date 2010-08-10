@@ -31,7 +31,7 @@ module SimpleAuth
     private
 
     def set_user_session(user_session)
-      session[:current_session] = Yajl::Parser.new.parse(user_session)['session']
+      session[:current_session] = Yajl::Parser.new.parse(user_session)
     end
   end
 end

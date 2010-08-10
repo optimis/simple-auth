@@ -25,7 +25,7 @@ describe SimpleAuth do
       subject.stub!(:session => {})
       subject.login
 
-      subject.session[:current_session].should == "test"
+      subject.session[:current_session].should == {"session"=>"test", "user"=>"test"}
     end
   end
 

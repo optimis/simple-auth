@@ -10,7 +10,7 @@ begin
     gem.email = "uchouhan@optimiscorp.com"
     gem.homepage = "http://github.com/uchouhan/simple-auth"
     gem.authors = ["Umang Chouhan"]
-    gem.add_development_dependency "rspec", ">= 2.0.0.beta.16"
+    gem.add_development_dependency "rspec"
     gem.add_development_dependency "yard", ">= 0"
     gem.add_dependency 'yajl-ruby', '>= 0'
     gem.add_dependency 'rest-client', '>= 0'

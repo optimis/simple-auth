@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'bundler'
+
 Bundler.setup
 Bundler.require(:default, :test)
 
@@ -12,7 +13,7 @@ require 'spec/support/mock_requests'
 
 FakeWeb.allow_net_connect = false
 
-RSpec.configure do |config|
+Spec::Runner.configure do |config|
   config.before(:each) do
     FakeWeb.clean_registry
   end
