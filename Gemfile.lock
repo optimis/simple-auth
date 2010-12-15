@@ -1,0 +1,28 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    fakeweb (1.3.0)
+    git (1.2.5)
+    jeweler (1.5.1)
+      bundler (~> 1.0.0)
+      git (>= 1.2.5)
+      rake
+    mime-types (1.16)
+    rake (0.8.7)
+    rest-client (1.6.1)
+      mime-types (>= 1.16)
+    rspec (1.3.0)
+    yajl-ruby (0.7.8)
+    yard (0.6.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  fakeweb
+  jeweler
+  rake
+  rest-client
+  rspec
+  yajl-ruby
+  yard
