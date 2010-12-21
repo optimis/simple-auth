@@ -7,7 +7,7 @@ begin
     gem.name = "simple-auth"
     gem.summary = %Q{Simple shared authentication API}
     gem.description = %Q{Provides a simple API to authenticate with a rails application}
-    gem.email = "uchouhan@optimiscorp.com"
+    gem.email = ["uchouhan@optimiscorp.com", "joshsmoore@gmail.com"]
     gem.homepage = "http://github.com/uchouhan/simple-auth"
     gem.authors = ["Umang Chouhan"]
     gem.add_development_dependency "rspec"
